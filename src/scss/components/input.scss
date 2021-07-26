@@ -78,6 +78,16 @@
 
     &__tip-wrap {
         position: relative;
+
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 3;
+            cursor: pointer;
+        }
     }
 
     &__tip {
