@@ -10,8 +10,10 @@ const Tip = ({ idTip, targetTip, tip, handleClickTip }) => {
 					value={targetTip}
 					onClick={handleClickTip}
 				/>
-				<div className={`input__tip ${targetTip === tip ? "active" : ""}`}>{idTip}</div>
 			</label>
+			<div className={`input__tip ${targetTip === tip ? "active" : ""}`}>
+				{idTip}
+			</div>
 		</div>
 	);
 };
