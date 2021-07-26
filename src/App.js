@@ -18,7 +18,7 @@ const App = () => {
   const [ numPeople, setNumPeople ] = useState("");
 
   const handleChangeBill = (e) => {
-    if (regex1.test(e.target.value) || e.target.value === "") {
+    if (regex1.test(String(e.target.value)) || e.target.value === "") {
 			setBill(e.target.value);
 		}
   };
@@ -29,16 +29,16 @@ const App = () => {
   };
 
   const handleChangeCustomTip = (e) => {
-    if (regex2.test(e.target.value) || e.target.value === "") {
+    if (regex2.test(String(e.target.value)) || e.target.value === "") {
 			setTip("");
 			setCustomTip(e.target.value);
 		}
   };
 
   const handleChangeNumPeople = (e) => {
-    if (regex3.test(e.target.value) || e.target.value === "") {
-      setNumPeople(e.target.value);
-    };
+    if (regex3.test(String(e.target.value)) || e.target.value === "") {
+			setNumPeople(e.target.value);
+		};
   };
 
   const handleClickReset = () => {
