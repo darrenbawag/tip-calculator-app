@@ -6,7 +6,7 @@ const People = ({ numPeople, handleChangeNumPeople, person }) => {
                 <img className="input__icon" src={person} alt="person sign" />
 				<input
 					className="input__text"
-					type="text"
+					type="number"
 					id="people"
 					name="people"
 					value={numPeople}
