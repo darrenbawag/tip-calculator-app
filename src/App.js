@@ -12,10 +12,10 @@ const dollar = "/images/icon-dollar.svg";
 const person = "/images/icon-person.svg";
 
 const App = () => {
-  const [ bill, setBill ] = useState("142.55");
-  const [ tip, setTip ] = useState("15");
+  const [ bill, setBill ] = useState("");
+  const [ tip, setTip ] = useState("");
   const [ customTip, setCustomTip ] = useState("");
-  const [ numPeople, setNumPeople ] = useState("5");
+  const [ numPeople, setNumPeople ] = useState("");
 
   const handleChangeBill = (e) => {
     if (regex1.test(e.target.value) || e.target.value === "") {
