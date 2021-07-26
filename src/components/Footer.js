@@ -11,7 +11,7 @@ const Footer = () => {
 				</a>
 				. Coded by{" "}
 				<a
-					href="https://www.rylandoehlers.com"
+					href="https://github.com/darrenbawag"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
