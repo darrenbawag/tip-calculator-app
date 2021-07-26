@@ -1,0 +1,95 @@
+@use '../util' as *;
+
+.output {
+    position: relative;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: rem(38) rem(40);
+    border-radius: rem(15);
+
+    @include breakpoint(medium) {
+        padding: rem(25) rem(23) rem(23);
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(18) 0;
+        margin-bottom: rem(5);
+
+        @include breakpoint(medium) {
+            padding: rem(14) 0 rem(0);
+            margin-bottom: 0;
+        }
+    }
+
+    &__group {
+        position: relative;
+        padding-bottom: rem(10);
+    }
+
+    &__amount {
+        position: relative;
+        width: 100%;
+        max-width: rem(210);
+        text-align: right;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: rem(10);
+
+        @include breakpoint(medium) {
+            max-width: 45vw;
+            margin-left: rem(15);
+        }
+
+        &::-webkit-scrollbar {
+            height: rem(4);
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--dark-grayish-cyan2); 
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: var(--light-grayish-cyan1); 
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: var(--light-grayish-cyan2); 
+        }
+    }
+
+    &__reset {
+        margin-top: rem(100);
+        padding: rem(12) rem(12) rem(9);
+        background-color: var(--strong-cyan);
+        font-family: var(--font-space-mono);
+        font-size: rem(20);
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        border: none;
+        border-radius: rem(5);
+        cursor: pointer;
+        transition: all .3s ease;
+
+        @include breakpoint(medium) {
+            margin-top: rem(24);
+        }
+
+        &:hover {
+            background-color: var(--light-grayish-cyan1);
+        }
+
+        &:disabled {
+            opacity: .4;
+            cursor: not-allowed;
+
+            &:hover {
+                background-color: var(--strong-cyan);
+            }
+        }
+    }
+}

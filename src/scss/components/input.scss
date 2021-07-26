@@ -1,0 +1,136 @@
+@use '../util' as *;
+
+.input {
+    position: relative;
+    padding: rem(13) rem(17);
+
+    @include breakpoint(medium) {
+        padding: rem(7);
+    }
+
+    &__wrap {
+        position: relative;
+        margin-bottom: rem(40);
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+            margin-bottom: rem(32);
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        color: var(--dark-grayish-cyan1);
+        font-size: rem(16);
+        font-weight: 700;
+        margin-bottom: rem(5);
+    }
+
+    &__group {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: rem(17);
+        left: rem(18);
+    }
+
+    &__text {
+        background-color: var(--light-grayish-cyan2);
+        border: solid rem(2) transparent;
+        color: var(--very-dark-cyan);
+        width: 100%;
+        font-family: var(--font-space-mono);
+        font-size: rem(24.3);
+        font-weight: 700;
+        text-align: right;
+        padding: rem(4) rem(16) rem(5);
+        border-radius: rem(5);
+
+        &::placeholder {
+            color: var(--dark-grayish-cyan2);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--strong-cyan);
+        }
+    }
+
+    &__tips {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: rem(13);
+        row-gap: rem(15);
+        margin-top: rem(11);
+
+        @include breakpoint(medium) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: rem(15);
+            row-gap: rem(16);
+        }
+    }
+
+    &__tip-wrap {
+        position: relative;
+    }
+
+    &__tip {
+        background-color: var(--very-dark-cyan);
+        padding: rem(6);
+        color: var(--white);
+        font-family: var(--font-space-mono);
+        font-size: rem(24);
+        font-weight: 700;
+        text-align: center;
+        border: none;
+        border-radius: rem(5);
+        cursor: pointer;
+        transition: all .3s ease;
+        position: relative;
+        z-index: 2;
+
+        &:hover, &.active {
+            background-color: var(--strong-cyan);
+            color: var(--very-dark-cyan);
+        }
+    }
+
+    &__radio {
+        width: 0;
+        height: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__custom-tip {
+        background-color: var(--light-grayish-cyan2);
+        border: solid rem(2) transparent;
+        color: var(--very-dark-cyan);
+        width: 100%;
+        font-family: var(--font-space-mono);
+        font-size: rem(24.3);
+        font-weight: 700;
+        text-align: right;
+        padding: rem(4) rem(12) rem(5) rem(13);
+        border-radius: rem(5);
+
+        @include breakpoint(medium) {
+            padding: rem(4) rem(15) rem(5) rem(13);
+        }
+
+        &::placeholder {
+            color: var(--dark-grayish-cyan2);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--strong-cyan);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../util' as *;
+
+.text-1, .text-2, .text-3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-1 {
+    font-size: rem(46);
+    font-weight: 700;
+    color: var(--strong-cyan);
+    line-height: 1;
+    margin-top: -(rem(3));
+
+    @include breakpoint(medium) {
+        font-size: rem(30.5);
+        margin-top: -(rem(1));
+    }
+}
+
+.text-2 {
+    font-size: rem(16);
+    font-weight: 700;
+    color: var(--white);
+}
+
+.text-3 {
+    font-size: rem(13);
+    font-weight: 700;
+    color: var(--dark-grayish-cyan2);
+}

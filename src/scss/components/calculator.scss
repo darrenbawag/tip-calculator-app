@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.calculator {
+    background-color: var(--white);
+    padding: rem(33) rem(32);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(30);
+    border-radius: rem(25);
+    box-shadow: 0px 10px 20px rgb(0 0 0 / 5%), 0px 20px 30px rgb(0 0 0 / 5%);
+
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr;
+        row-gap: rem(24);
+        padding: rem(25) rem(25) rem(30);
+    }
+}
