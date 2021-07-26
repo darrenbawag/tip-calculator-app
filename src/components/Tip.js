@@ -9,6 +9,7 @@ const Tip = ({ idTip, targetTip, tip, handleClickTip }) => {
 					name="tip"
 					value={targetTip}
 					onClick={handleClickTip}
+					aria-label={idTip}
 				/>
 			</label>
 			<div className={`input__tip ${targetTip === tip ? "active" : ""}`}>
